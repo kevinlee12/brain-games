@@ -1,12 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 	<head>
-	<title>Brain Games</title>
-	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<title>Brain Games</title>
+		<!-- jQuery -->
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<!-- Boostrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<!-- Angular -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+		<!-- Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,900,300italic' rel='stylesheet' type='text/css'>
+		<!-- SmoothScroll -->
+		<script src="assets/js/SmoothScroll.js"></script>
+		<!-- Main CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<!-- Page JS -->
+		<script src="assets/js/main.js"></script>
 	</head>
-	<body>
-		<p> Some stuff here </p>
+
+	<body ng-app="brainGames">
+		<div id="container">
+			<div class="parallax background panel">
+				<div id="main-title">
+					<div id="big">Brain Games</div>
+					<div id="small">Games inspired by a documentary.</div>
+				</div>
+				<div id="overlay"></div>
+				<a href="#categorizations" id="bouncing-arrow">
+					<i class="fa fa-chevron-down"></i>
+				</a>
+			</div>
+			<div id="content">
+				<section class="panel" id="categorizations" ng-controller="categorization">
+					<h2 style="color:white">Earth or not?</h2>
+					<div id="categorization-rule">
+						Rules are simple, press the left arrow for Earth and the right arrow for not Earth.
+					</div>
+					<div id="planet-flash" ng-bind-html="planet" ng-click="game()"><div>
+				</section>
+			</div>
+		</div>
 	</body>
 </html>
-
-
